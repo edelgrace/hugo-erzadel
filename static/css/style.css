@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Lato', Helvetica, Arial, Sans-Serif;
+    font-size: 1.1em;
     margin: 0px auto;
     background: #e8e9eb;
 }
@@ -132,7 +133,6 @@ nav li {
 
 nav li a {
     padding: 10px;
-    flex-grow: 1;
     color: #ffffff;
 }
 
