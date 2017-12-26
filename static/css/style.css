@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Pattaya');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Molengo');
 
 body {
-    font-family: 'Lato', Helvetica, Arial, Sans-Serif;
+    font-family: 'Molengo', Helvetica, Arial, Sans-Serif;
     font-size: 1.1em;
     margin: 0px auto;
     background: #e8e9eb;
@@ -11,6 +11,10 @@ body {
 div, img, section, header, footer, nav {
     max-width: 100%;
     box-sizing: border-box;
+}
+
+p {
+    line-height: 2;
 }
 
 a {
@@ -36,16 +40,18 @@ h1 {
 
 .subtitle {
     color: #e8e9eb;
-    text-transform: lowercase;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 1.6em;
+    text-transform: uppercase;
+    font-family: 'Molengo', Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
     font-weight: normal;
     margin-top: 0px;
 }
 
 h2 {
     color: #f86328;
+    font-family: 'Molengo', Helvetica, Arial, sans-serif;    
     font-size: 2em;
+    margin-bottom: 0px;
 }
 
 h3 {
@@ -61,7 +67,7 @@ h3 {
     margin: 0px auto;
 }
 
-/* HEADER: LOGO AND TITLE */
+/* HEADER: TITLE */
 
 header {
     width: 100%;
@@ -76,22 +82,7 @@ header {
     margin: 0px auto;
 }
 
-.photo img {
-    max-height: 200px;
-    max-width: 200px; 
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border: solid 5px #ffffff;
-    margin-top: 20px;
-}
-
 @media screen and (max-width:520px) {
-    .logo {
-        text-align: center;
-        display: inline-block;
-    }
-
     .title {
         display: inline-block;
         text-align: center;
@@ -100,10 +91,6 @@ header {
 }
 
 @media screen and (min-width:521px) {
-    .logo {
-        float: right;
-    }
-
     .title {
         text-align: center;
     }
@@ -149,6 +136,18 @@ nav li a:hover {
     }
 }
 
+/* ABOUT */
+
+
+.photo img {
+    max-height: 200px;
+    max-width: 200px; 
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: solid 5px #ffffff;
+    margin-top: 20px;
+}
 
 /* PROJECTS */
 
