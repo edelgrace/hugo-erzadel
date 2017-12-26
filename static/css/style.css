@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Molengo', Helvetica, Arial, Sans-Serif;
-    font-size: 1.1em;
+    font-size: 1.15em;
     margin: 0px auto;
     background: #ffffff;
 }
@@ -51,11 +51,12 @@ h2 {
     color: #f86328;
     font-family: 'Molengo', Helvetica, Arial, sans-serif;    
     font-size: 2em;
+    text-align: center;
     margin: 0px;
 }
 
 h3 {
-    font-size: 1.7em;
+    font-size: 1.3em;
 }
 
 /* CONTAINER */
@@ -65,15 +66,6 @@ h3 {
     position: relative;
     padding: 0px;
     margin: 0px auto;
-}
-
-/* SECTION WRAPPER */
-
-.section-wrapper {
-    margin-top: 30px;
-    padding: 30px;
-    background: #e8e9eb;
-    box-shadow: 5px 5px 5px #d5d5d5;
 }
 
 /* HEADER: TITLE */
@@ -147,6 +139,14 @@ nav li a:hover {
 
 /* ABOUT */
 
+.about-wrapper {
+    width: 100%;
+    margin: 50px 0px 50px 0px;
+    padding: 30px;
+    background: #e8e9eb;
+    box-shadow: 5px 5px 5px #d5d5d5;
+}
+
 .photo {
     padding: 0px;
     margin-right: 20px;
@@ -175,15 +175,10 @@ nav li a:hover {
 
 /* PROJECTS */
 
-#projects {
+.project-wrapper {
     display: flex;
     flex-flow: wrap;
-    margin: 10px auto;
-}
-
-#projects h2 {
-    display: block;
-    width: 100%;
+    margin: 0px auto;
 }
 
 .project {
