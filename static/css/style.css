@@ -148,13 +148,23 @@ nav li a:hover {
 /* ABOUT */
 
 .photo img {
-    max-height: 200px;
-    max-width: 200px; 
+    max-height: 150px;
+    max-width: 150px; 
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border: solid 5px #ffffff;
     margin-top: 20px;
+}
+
+/* MAX WIDTH 900PX */
+
+@media screen and (max-width:900px) {
+    .photo {
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 /* PROJECTS */
