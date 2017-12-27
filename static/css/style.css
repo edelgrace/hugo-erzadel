@@ -28,6 +28,38 @@ a:hover {
     text-decoration: underline;
 }
 
+/* FORMS */
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 10px;
+    -webkit-appearance: none;
+}
+
+button {
+    background: #f06543;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    background: #e8e9eb;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+    margin: 0px auto;
+    width: 60%;
+}
+
 /* HEADINGS */
 
 h1 {
@@ -53,7 +85,7 @@ h2 {
     font-family: 'Molengo', Helvetica, Arial, sans-serif;    
     font-size: 2em;
     text-align: center;
-    margin: 0px;
+    margin: 0px 0px 20px 0px;
 }
 
 h3 {
@@ -224,6 +256,12 @@ nav li a:hover {
         width: 49%;
         float: left;
     }
+}
+
+/* CONTACT */
+
+.contact-form {
+    margin: 0px auto;
 }
 
 /* FOOTER */

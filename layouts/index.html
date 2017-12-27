@@ -51,5 +51,32 @@
 
 </section>
 
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <h2>Contact</h2>
+
+
+  <p>Want to keep in touch? Use the form below to send me an e-mail or follow me on social media.</p>
+
+  <div class="contact-form">
+      <form action="https://formspree.io/tamago.today@gmail.com" method="POST">
+        
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" placeholder="Name" required><br>
+        
+        <label for="email">E-mail:</label><br>
+        <input type="email" name="_replyto" placeholder="E-mail" required><br>
+        
+        <label for="message">Message:</label><br />
+        <textarea name="message" required>Write your message here</textarea><br>
+       
+        <button type="submit">Send</button>
+      </form> 
+  </div>
+
+</section>
+
 
 {{ partial "footer.html" . }}
