@@ -161,7 +161,7 @@ nav li a:hover {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border: solid 5px #ffffff;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /* MAX WIDTH 900PX */
@@ -178,6 +178,7 @@ nav li a:hover {
 
 .project-wrapper {
     display: flex;
+    justify-content: space-between;
     flex-flow: wrap;
     margin: 0px auto;
 }
@@ -185,16 +186,19 @@ nav li a:hover {
 .project {
    width: 33%;
    padding: 20px;
-   margin: 20px;
    text-align: left;
    background: #e8e9eb;
+   margin-top: 20px;
+   margin-bottom: 20px;
    box-shadow: 5px 5px 5px #d5d5d5;
    box-sizing: border-box;
 }
 
 .project-img {
+    width: 100%;
     padding: 0px;
     margin: 0px auto;
+    text-align: center;
 }
 
 .project a {
@@ -203,11 +207,10 @@ nav li a:hover {
 
 /* MAX WIDTH 500PX */
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1150px) {
     .project {
         width: 100%;
         display: block;
-        margin-right: 0px;
     }
     .project-img {
         text-align: center;
@@ -216,9 +219,9 @@ nav li a:hover {
 
 /* MIN WIDTH 830PX */
 
-@media screen and (min-width:901px) {
+@media screen and (min-width:1151px) {
     .project {
-        width: 45%;
+        width: 49%;
         float: left;
     }
 }

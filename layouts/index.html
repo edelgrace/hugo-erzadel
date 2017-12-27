@@ -6,14 +6,15 @@
 
   <div class="about-wrapper">
 
-    <h2>About</h2>
-    
+      <h2>About</h2>
+
       <div class="photo">
         <img src="http://res.cloudinary.com/dvozrk6m8/image/upload/v1512463955/edel-altares_jcufrn.png" alt="A photo of me" />
       </div>    
 
       <div class="about">
-        <p>My name is <b>Edel Grace Altares</b>. I am a soon to be <b>Computer Science</b> graduate from the <b>University of Calgary</b>. My programming interests include <b>full stack development</b> and <b>Android development</b>. My languages of choice are <b>Python</b> and <b>Java</b>. Outside of programming I enjoy crocheting, video games, and reading.</p>
+        
+        <p>My name is <b>Edel Grace Altares</b>. I am a <b>Computer Science</b> student at the <b>University of Calgary</b> and I expect to graduate in April 2018. My programming interests include <b>full stack development</b> and <b>back end development</b>. My languages of choice are <b>Python</b> and <b>Java</b>. Outside of programming I enjoy crocheting, video games, cats, historical fiction, and reading.</p>
       </div>
     
   </div>
@@ -38,6 +39,8 @@
           </div>
 
           <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+
+          {{ with .Params.snippet }}<p>{{ . }}</p>{{ end }}
 
       </div>
     
