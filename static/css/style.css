@@ -261,11 +261,45 @@ nav li a:hover {
 /* CONTACT */
 
 .contact-form {
+    margin: 10px auto;
+}
+
+.social-media {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.social-media ul {
+    list-style: none;
     margin: 0px auto;
+    padding: 0px;
+}
+
+.social-media li {
+    float: left;
+}
+
+.social-media li a {
+    display: block;
+    width: 60px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.social-media li a:hover {
+    background: #f06543;
+    color: #ffffff;
 }
 
 /* FOOTER */
 
 footer {
     text-align: center;
+    width: 100%;
+    color: #ffffff;
+    background: #292f36;
+    padding: 20px;
+    margin-top: 20px;
 }
