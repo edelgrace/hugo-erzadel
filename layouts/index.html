@@ -34,7 +34,7 @@
       <div class="project">
 
           <div class="project-img">
-              {{ with .Params.featured_image }}<img src="{{ . }}">{{ end }}
+              {{ with .Params.featured_image }}<a href="{{ .Permalink }}"><img src="{{ . }}"></a>{{ end }}
           </div>
 
           <h3>{{ .Title }}</h3>
