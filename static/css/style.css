@@ -47,6 +47,10 @@ button {
     font-weight: bold;
 }
 
+button:hover {
+    background: #368293;
+}
+
 input, select, textarea {
     background: #e8e9eb;
 }
