@@ -14,7 +14,7 @@ div, img, section, header, footer, nav {
     box-sizing: border-box;
 }
 
-p {
+p, li {
     line-height: 2;
 }
 
