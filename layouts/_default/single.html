@@ -1,7 +1,15 @@
 {{ partial "header.html" . }}
 
-<h2>{{ .Title }}</h2>
+<section id="project-page">
 
-{{ .Content }}
+  <div class="project-page-wrapper">
+
+      <h2>{{ .Title }}</h2>
+      
+      {{ .Content }}
+
+  </div>
+
+</section>
 
 {{ partial "footer.html" . }}

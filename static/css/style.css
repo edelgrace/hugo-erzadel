@@ -84,15 +84,18 @@ h1 {
     margin-top: 0px;
 }
 
-h2 {
+h2, .project-page-wrapper h1 {
     color: #f06543;
     font-family: 'Molengo', Helvetica, Arial, sans-serif;    
     font-size: 2em;
+    font-style: normal;
     text-align: center;
     margin: 0px 0px 20px 0px;
 }
 
 h3 {
+    color: #f06543;
+    font-family: 'Molengo', Helvetica, Arial, sans-serif;
     font-size: 1.3em;
 }
 
@@ -295,6 +298,13 @@ nav li a:hover {
 .social-media li a:hover {
     background: #f06543;
     color: #ffffff;
+}
+
+/* PROJECT PAGE */
+
+.project-page-wrapper {
+    padding: 10px;
+    margin-top: 20px;
 }
 
 /* FOOTER */
