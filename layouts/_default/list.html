@@ -5,21 +5,41 @@
     
     <h2>{{ .Title }}</h2>
     
-          {{ range (.Paginator 5).Pages }}
-    
-          <article>
-            <div class="article">
+      {{ range (.Paginator 5).Pages }}
 
-              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-              <h4>{{ .Date.Format "Jan 2, 2006" }}</h4>
-              {{ .Content }}
+      <article>
+        <div class="article">
 
-            </div>
-          </article>
-    
-          {{ end }}
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <h4>{{ .Date.Format "Jan 2, 2006" }}</h4>
+          
+          <ul class="tags">
+            {{ range .Params.tags }}
+            <li><a href="{{ "/tags/" }  relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+
+          <p>{{ .Summary }}</p>
+
+        </div>
+      </article>
+
+      {{ end }}
       
   </div>
+
+  <div class="pagination">
+    
+    {{ if .Paginator.HasPrev }}
+    <a class="prev" href="{{ .Paginator.Prev.URL }}">Previous</a>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+    <a class ="next" href="{{ .Paginator.Next.URL }}">Next</a>
+    {{ end }}
+
+  </div>
+
 </section>
 
   

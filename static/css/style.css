@@ -301,13 +301,15 @@ nav li a:hover {
     color: #ffffff;
 }
 
-/* PROJECT PAGE */
+/* PROJECT PAGE, LIST */
 
-.project-page-wrapper {
+.project-page-wrapper, .list-wrapper {
     width: 80%;
     padding: 10px;
     margin: 20px auto;
 }
+
+/* LIST */
 
 /* FOOTER */
 
