@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+
+<div class="blog-wrapper">
+  <div class="list-wrapper">
+  
+    <h2>Archive</h2>
+
+    {{ with .Site.GetPage "section" "blog" }}
+
+    {{ range .Data.Pages.GroupByDate "Jan-2006" }}
+
+    <section id="{{ .Key }}">
+
+      <h3>{{ .Key }}</h3>
+      
+      <ul>
+        
+        {{ range .Pages }}
+  
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  
+        {{ end }}
+  
+      </ul>
+  
+      {{ end }}
+      
+    </section>
+    
+    {{ end }}
+
+  </div>  
+
+</div>
+
+{{ partial "sidebar.html" . }}
+
+{{ partial "footer.html" . }}

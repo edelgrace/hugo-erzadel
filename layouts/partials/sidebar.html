@@ -30,7 +30,7 @@
 
     {{ if .Term }}
 
-    <li><a href="/tags/ {{ .Term }}">{{ .Term }}</a></li>
+    <li><a href="/tags/{{ .Term }}">{{ .Term }}</a></li>
 
     {{ end }}
 
@@ -44,8 +44,8 @@
 
   <ul>
 
-  {{ range .Data.Pages.GroupByDate "2006" }}
-    <li><a href="/blog/{{ .Key }}">{{ .Key }}</a></li>
+  {{ range .Data.Pages.GroupByDate "Jan-2006" }}
+    <li><a href="/archive/#{{ .Key }}">{{ .Key }}</a></li>
 
   {{ end }}
 
