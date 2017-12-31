@@ -40,4 +40,17 @@
 
   <h2>Archives</h2>
   
+  {{ with .Site.GetPage "section" "blog" }}
+
+  <ul>
+
+  {{ range .Data.Pages.GroupByDate "2006" }}
+    <li><a href="/blog/{{ .Key }}">{{ .Key }}</a></li>
+
+  {{ end }}
+
+  </ul>
+
+  {{ end }}
+
 </div>
