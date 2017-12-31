@@ -21,7 +21,21 @@
 
   <h2>Categories</h2>
 
-  <h2>Tags</h2>
+  {{ $categories := $.Site.Taxonomies.categories.ByCount }}
+
+  <ul>
+
+    {{ range $categories}}
+
+    {{ if .Term }}
+
+    <li><a href="/tags/ {{ .Term }}">{{ .Term }}</a></li>
+
+    {{ end }}
+
+    {{ end }}
+      
+  </ul>
 
   <h2>Archives</h2>
   
