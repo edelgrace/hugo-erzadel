@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 
-<section id="list">
+<div class="blog-wrapper">
+
   <div class="list-wrapper">
     
     <h2>{{ .Title }}</h2>
@@ -46,7 +47,8 @@
 
   </div>
 
-</section>
+</div>
 
+{{ partial "sidebar.html" . }}
   
 {{ partial "footer.html" . }}
