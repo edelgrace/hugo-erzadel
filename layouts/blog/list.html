@@ -35,11 +35,11 @@
   <div class="pagination">
     
     {{ if .Paginator.HasPrev }}
-    <a class="prev" href="{{ .Paginator.Prev.URL }}">Previous</a>
+    <a class="prev" href="{{ .Paginator.Prev.URL }}">Newer</a>
     {{ end }}
 
     {{ if .Paginator.HasNext }}
-    <a class ="next" href="{{ .Paginator.Next.URL }}">Next</a>
+    <a class ="next" href="{{ .Paginator.Next.URL }}">Older</a>
     {{ end }}
 
   </div>

@@ -21,6 +21,10 @@ blockquote {
     border-left: 3px solid #f06543; 
 }
 
+pre {
+    overflow: auto;
+}
+
 p, li {
     line-height: 2;
 }
@@ -100,7 +104,7 @@ h2, .project-page-wrapper h1 {
     margin: 0px 0px 20px 0px;
 }
 
-h3, .project-page-wrapper h2 {
+h3, .project-page-wrapper h2, .project h3 {
     color: #f06543;
     font-family: 'Molengo', Helvetica, Arial, sans-serif;
     font-size: 1.5em;
@@ -114,6 +118,10 @@ h3, .project-page-wrapper h2 {
     position: relative;
     padding: 0px;
     margin: 0px auto;
+}
+
+.full {
+    width: 100%;
 }
 
 /* HEADER: TITLE */
@@ -355,6 +363,7 @@ nav li a:hover {
 .pagination {
     clear: both;
     overflow: auto;
+    margin-bottom: 20px;
 }
 
 .prev, .next {

@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<section id="projects">
+
+  <h2 class="projects">Projects</h2>
+
+  <div class="project-wrapper">
+
+    {{ range where .Data.Pages "Section" "project" }}
+    
+      <div class="project">
+
+        <div class="project-img">
+          <a href="{{ .Permalink }}">{{ with .Params.featured_image }}<img src="{{ . }}"></a>{{ end }}
+        </div>
+
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+
+        {{ with .Params.snippet }}<p>{{ . }}</p>{{ end }}
+
+      </div>
+    
+      {{ end }}
+
+</div>
+
+</section>
+
+{{ partial "footer.html" . }}
