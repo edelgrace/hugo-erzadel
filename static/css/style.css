@@ -371,6 +371,10 @@ nav li a:hover {
     margin: 0px;
 }
 
+.blog-wrapper .list-wrapper {
+    width: 95%;
+}
+
 .blog-sidebar {
     width: 20%;
     float: left;
@@ -380,6 +384,11 @@ nav li a:hover {
 .blog-sidebar h2 {
     text-align: left;
     margin: 20px 0px 0px 0px;
+}
+
+.blog-sidebar .about-wrapper {
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* TAGS, CATEGORIES */
