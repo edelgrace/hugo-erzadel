@@ -188,10 +188,17 @@ nav li a:hover {
     box-shadow: 5px 5px 5px #d5d5d5;
 }
 
+.about-wrapper::after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
 .photo {
     padding: 0px;
     margin-right: 20px;
     float: left;
+    height: 100%;
 }
 
 .photo img {
@@ -202,6 +209,10 @@ nav li a:hover {
     -moz-border-radius: 50%;
     border: solid 5px #ffffff;
     margin-top: 0px;
+}
+
+.about {
+    height: 100%;
 }
 
 /* MAX WIDTH 900PX */
@@ -329,6 +340,7 @@ nav li a:hover {
 
 .list-wrapper img {
     display: block;
+    width: 100%;
     max-width: 600px;
     margin: 0px auto;
     text-align: center;
@@ -389,6 +401,22 @@ nav li a:hover {
 .blog-sidebar .about-wrapper {
     width: 100%;
     margin-top: 10px;
+}
+
+/* MAX 1475PX */
+
+@media screen and (max-width:1475px) {
+    .blog-wrapper {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .blog-sidebar {
+        display: block;
+        float: none;
+        width: 100%;
+    }
 }
 
 /* TAGS, CATEGORIES */
