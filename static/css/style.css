@@ -402,6 +402,8 @@ nav li a:hover {
     width: 95%;
 }
 
+/* SIDEBAR */
+
 .blog-sidebar {
     width: 30%;
     float: left;
@@ -416,6 +418,25 @@ nav li a:hover {
 .blog-sidebar .about-wrapper {
     width: 100%;
     margin-top: 10px;
+}
+
+.blog-sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.blogroll li a {
+    display: block;
+    width: 100%;
+    background: #f06543;
+    color: #ffffff;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.blogroll li a:hover {
+    background: #368293;
 }
 
 /* MAX 1100PX */
