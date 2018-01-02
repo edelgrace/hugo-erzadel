@@ -86,6 +86,11 @@ h1 {
     margin-bottom: 0px;
 }
 
+
+h1 a:link, h1 a:visited, h1 a:hover {
+    color: #ffffff;
+}
+
 .subtitle {
     color: #ffffff;
     text-transform: uppercase;
@@ -122,6 +127,12 @@ h3, .project-page-wrapper h2, .project h3 {
 
 .full {
     width: 100%;
+}
+
+@media screen and (max-width:800px) {
+    #container {
+        max-width: 100%;
+    }
 }
 
 /* HEADER: TITLE */
