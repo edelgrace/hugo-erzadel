@@ -14,6 +14,11 @@ div, img, section, header, footer, nav {
     box-sizing: border-box;
 }
 
+figure {
+    max-width: 100%;
+    margin: 0px;
+}
+
 blockquote {
     color: #646464;
     font-style: italic;
@@ -129,7 +134,7 @@ h3, .project-page-wrapper h2, .project h3 {
     width: 100%;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
     #container {
         max-width: 100%;
     }
@@ -341,7 +346,7 @@ nav li a:hover {
 /* PROJECT PAGE, LIST, BLOG */
 
 .project-page-wrapper, .list-wrapper, .blog-sidebar {
-    width: 80%;
+    width: 90%;
     padding: 10px;
     margin: 20px auto;
 }
