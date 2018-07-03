@@ -51,22 +51,25 @@
   
   {{ with .Site.GetPage "section" "blog" }}
 
-  <ul>
+  <select id="archives">
 
   {{ range .Data.Pages.GroupByDate "Jan-2006" }}
-    <li><a href="/archive/#{{ .Key }}">{{ .Key }}</a></li>
+    <option value="/archive/#{{ .Key }}">{{ .Key }}</option>
 
   {{ end }}
 
-  </ul>
+  </select>
 
   {{ end }}
+
+  <button id="go" onclick="archives()">Go</button>
 
   <h2>Blogroll</h2>
 
   <ul class="blogroll">
     <li><a href="https://fadedout.com">Kim</a></li>
     <li><a href="https://violinstar.net">Sakura</a></li>
+    <li><a href="http://janepedia.com/">Jane</a></li>
   </ul>
 
 </div>
