@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Pattaya');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Molengo');
 
 body {
     color: #292f36;
-    font-family: 'Molengo', Helvetica, Arial, Sans-Serif;
+    font-family: 'Libre Baskerville';
     font-size: 1.15em;
     margin: 0px auto;
     background: #ffffff;
@@ -84,7 +84,7 @@ form {
 
 h1 {
     color: #ffffff;
-    font-family: 'Pattaya', Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 5em;
     margin-top: 0px;
