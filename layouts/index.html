@@ -36,7 +36,7 @@
 <div class="blog-wrapper">
   <div class="list-wrapper">
   
-    {{ range (.Paginator 5).Pages }}
+    {{ range where (.Paginator 5).Pages "Section" "blog" }}
 
     <article>
       <div class="article">
