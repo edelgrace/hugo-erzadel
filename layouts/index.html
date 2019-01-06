@@ -1,92 +1,85 @@
-{{ partial "header.html" . }}
+<!-- {{ partial "header.html" . }}
 
-<!-- ABOUT -->
+<div class="blog-wrapper">
+  <div class="list-wrapper">
+  
+    <h1>Archives</h1>
 
-<section id="about">
+    {{ with .Site.GetPage "section" "blog" }}
 
-  <div class="about-wrapper">
+    {{ range .Data.Pages.GroupByDate "2006" }}
 
-      <h2>About</h2>
+    <h2>{{ .Key }} </h2>
 
-      <div class="photo">
-        <img src="{{ $.Site.Params.avatar }}" alt="A photo of me" />
-      </div>    
+    <ul>
+      
+      {{ range .Pages }}
 
-      <div class="about">
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 
-        <p>{{ markdownify $.Site.Params.description }}</p>
-
-      </div>
-    
-  </div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-  <h2 class="projects">Projects</h2>
-
-  <div class="project-wrapper">
-
-    {{ range where .Data.Pages "Section" "project" }}
-    
-      <div class="project">
-
-          <div class="project-img">
-            <a href="{{ .Permalink }}">{{ with .Params.featured_image }}<img src="{{ . }}"></a>{{ end }}
-          </div>
-
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-
-          {{ with .Params.snippet }}<p>{{ . }}</p>{{ end }}
-
-      </div>
-    
       {{ end }}
 
-  </div>
-
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-  <h2>Contact</h2>
-
-
-  <p>Want to keep in touch? Use the form below to send me an e-mail or follow me on social media.</p>
-
-  <div class="contact-form">
-      <form action="https://formspree.io/tamago.today@gmail.com" method="POST">
-        
-        <label for="name">Name:</label><br>
-        <input type="text" name="name" placeholder="Name" required><br>
-        
-        <label for="email">E-mail:</label><br>
-        <input type="email" name="_replyto" placeholder="E-mail" required><br>
-        
-        <label for="message">Message:</label><br />
-        <textarea name="message" required>Write your message here</textarea><br>
-       
-        <button type="submit">Send</button>
-      </form> 
-  </div>
-
-  <div class="social-media">
-    <ul>
-        <li><a href="https://www.linkedin.com/in/edel-altares/"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/edelgrace"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://twitter.com/edelgraceme"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.ravelry.com/people/erzadel"><i class="fa fa-ravelry"></i></a></li>
     </ul>
+
+    {{ end }}
+
+    {{ end }}
+
+</div>  
+
+{{ partial "sidebar.html" . }}
+
+{{ partial "footer.html" . }} -->
+
+{{ partial "header.html" . }}
+
+<div class="blog-wrapper">
+  <div class="list-wrapper">
+  
+    {{ range (.Paginator 5).Pages }}
+
+    <article>
+      <div class="article">
+
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h3>{{ .Date.Format "January 2, 2006" }} | <a href="{{ .Permalink }}#disqus_thread">Comments</a></h3>
+
+        <p>{{ .Summary }}</p>
+
+        <div class="tags">
+          <strong>Category:</strong> 
+          {{ range.Params.categories }}
+          <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>           
+          {{ end }}
+
+          <br />
+
+          <strong>Tags:</strong> 
+          {{ range .Params.tags }}
+          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+          {{ end }}
+        </div>
+
+      </div>
+    </article>
+
+    {{ end }}
+      
   </div>
 
-</section>
+  <div class="pagination">
+    
+    {{ if .Paginator.HasPrev }}
+    <a class="prev" href="{{ .Paginator.Prev.URL }}">Newer</a>
+    {{ end }}
 
+    {{ if .Paginator.HasNext }}
+    <a class ="next" href="{{ .Paginator.Next.URL }}">Older</a>
+    {{ end }}
+
+  </div>
+</div>  
+
+{{ partial "sidebar.html" . }}
 
 {{ partial "footer.html" . }}

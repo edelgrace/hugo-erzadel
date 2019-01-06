@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Pattaya');
-@import url('https://fonts.googleapis.com/css?family=Molengo');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 
 body {
-    color: #292f36;
-    font-family: 'Molengo', Helvetica, Arial, Sans-Serif;
-    font-size: 1.15em;
+    color: #092d42;
+    font-family: 'Libre Baskerville';
+    font-size: 0.9em;
     margin: 0px auto;
-    background: #ffffff;
+    background: url('http://erzadel.net/agsquare_@2X.png');
 }
 
 div, img, section, header, footer, nav {
@@ -23,7 +22,7 @@ blockquote {
     color: #646464;
     font-style: italic;
     padding: 0px 0px 0px 20px;
-    border-left: 3px solid #f06543; 
+    border-left: 3px solid #092d42; 
 }
 
 pre {
@@ -31,16 +30,16 @@ pre {
 }
 
 p, li {
-    line-height: 2;
+    line-height: 1.8;
 }
 
 a {
-    color: #368293;
+    color: #893746;
     text-decoration: none;
 }
 
 a:hover {
-    color: #f06543;
+    color: #092d42;
     text-decoration: underline;
 }
 
@@ -58,13 +57,13 @@ button, input, select, textarea {
 }
 
 button {
-    background: #f06543;
+    background: #092d42;
     color: #ffffff;
     font-weight: bold;
 }
 
 button:hover {
-    background: #368293;
+    background: #893746;
 }
 
 input, select, textarea {
@@ -83,60 +82,41 @@ form {
 /* HEADINGS */
 
 h1 {
-    color: #ffffff;
-    font-family: 'Pattaya', Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 5em;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
     margin-top: 0px;
     margin-bottom: 0px;
+    font-weight: normal;
 }
 
 
 h1 a:link, h1 a:visited, h1 a:hover {
     color: #ffffff;
+    text-decoration: none;
 }
 
-.subtitle {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-family: 'Molengo', Helvetica, Arial, sans-serif;
-    font-size: 1.1em;
-    font-weight: normal;
-    margin-top: 0px;
+h1 a:hover {
+    border-bottom: #bfbfbf dashed 1px;
 }
 
-h2, .project-page-wrapper h1 {
-    color: #f06543;
-    font-family: 'Molengo', Helvetica, Arial, sans-serif;    
-    font-size: 2em;
-    font-style: normal;
-    text-align: center;
-    margin: 0px 0px 20px 0px;
+h2 {
+    color: #092d42;
+    text-align: left;
+    margin: 20px 0px 0px 0px;
 }
 
-h3, .project-page-wrapper h2, .project h3 {
-    color: #f06543;
-    font-family: 'Molengo', Helvetica, Arial, sans-serif;
-    font-size: 1.8em;
+h3 {
+    color: #125780;
     text-align: left;
 }
 
-.project-page-wrapper h3, .project-page-wrapper h4, .project-page-wrapper h5 {
-    color: #368293;    
+figcaption h4 {
+    font-size: 1.0em !important;
+    font-weight: bold!important;
+    color: #092d42 !important;
+    text-align: center;
+    margin: 0px 0px 10px !important;
 }
-
-.project-page-wrapper h3 {
-    font-size: 1.5em;
-}
-
-.project-page-wrapper h4 {
-    font-size: 1.3em;
-}
-
-.project-page-wrapper h5 {
-    font-size: 1.0em;
-}
-
+ 
 /* CONTAINER */
 
 #container {
@@ -156,31 +136,35 @@ h3, .project-page-wrapper h2, .project h3 {
     }
 }
 
+/* TAGS */
+
+.tags {
+    margin: 20px auto;
+}
+
 /* HEADER: TITLE */
 
 header {
+    display: flex;
     width: 100%;
-    overflow: hidden;
-    padding: 20px;
-    background: #f06543;
+    padding: 20px 20px;
+    margin: 0px auto;
+    background: #092d42;
 }
 
 .header-content {
-    text-align: center;
-    max-width: 70%;
+    width: 25%;
     margin: 0px auto;
 }
 
-@media screen and (max-width:520px) {
-    .title {
-        display: inline-block;
-        text-align: center;
-        margin: 0px auto;
+ @media screen and (max-width:700px) {
+    header {
+        width: 100%;
+        display: block;
     }
-}
 
-@media screen and (min-width:521px) {
-    .title {
+    .header-content {
+        width: 100%;
         text-align: center;
     }
 }
@@ -189,38 +173,38 @@ header {
 
 nav {
     display: flex;
+    width: 70%;
     flex-wrap: nowrap;
     -webkit-flex-wrap: nowrap;
     justify-content: flex-end;
-    padding: 5px;
-    background: #292f36;
+    padding: 0px 5px;
 }
 
 nav ul {
     padding: 0px;
+    margin: 0px;
 }
 
 nav li {
-    padding: 5px;
+    padding: 5px 10px;
     margin: 0px;
     list-style: none;
     float: left;
 }
 
 nav li a {
-    padding: 10px;
     color: #ffffff;
 }
 
 nav li a:hover {
+    color: #ffffff;
     text-decoration: none;
-    background: #ffffff;
+    border-bottom: #bfbfbf dashed 1px;
 }
 
-/* MAX WIDTH 560PX */
-
-@media screen and (max-width:560px) {
+@media screen and (max-width:700px) {
     nav {
+        width: 100%;
         justify-content: center;
     }
 }
@@ -229,10 +213,6 @@ nav li a:hover {
 
 .about-wrapper {
     width: 100%;
-    margin: 50px 0px 50px 0px;
-    padding: 30px;
-    background: #e8e9eb;
-    box-shadow: 5px 5px 5px #d5d5d5;
 }
 
 .about-wrapper::after {
@@ -272,58 +252,6 @@ nav li a:hover {
 
 }
 
-/* PROJECTS */
-
-.project-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: wrap;
-    margin: 0px auto;
-}
-
-.project {
-   width: 33%;
-   padding: 20px;
-   text-align: left;
-   background: #e8e9eb;
-   margin-top: 20px;
-   margin-bottom: 20px;
-   box-shadow: 5px 5px 5px #d5d5d5;
-   box-sizing: border-box;
-}
-
-.project-img {
-    width: 100%;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-}
-
-.project a {
-    overflow-wrap: break-word;
-}
-
-/* MAX WIDTH 500PX */
-
-@media screen and (max-width:1150px) {
-    .project {
-        width: 100%;
-        display: block;
-    }
-    .project-img {
-        text-align: center;
-    }
-}
-
-/* MIN WIDTH 830PX */
-
-@media screen and (min-width:1151px) {
-    .project {
-        width: 49%;
-        float: left;
-    }
-}
-
 /* CONTACT */
 
 .contact-form {
@@ -355,13 +283,13 @@ nav li a:hover {
 }
 
 .social-media li a:hover {
-    background: #f06543;
+    background: #092d42;
     color: #ffffff;
 }
 
 /* PROJECT PAGE, LIST, BLOG */
 
-.project-page-wrapper, .list-wrapper, .blog-sidebar {
+.blog-sidebar {
     width: 90%;
     padding: 10px;
     margin: 20px auto;
@@ -369,26 +297,20 @@ nav li a:hover {
 
 /* LIST */
 
+.list-wrapper {
+    width: 90%;
+    padding: 10px;
+    margin: 0px auto;
+}
+
 .article {
     margin-bottom: 30px;
 }
 
-.list-wrapper h3 {
-    font-size: 1.7em;
-    margin: 0px;
-    padding: 0px;
-}
-
-.list-wrapper h4 {
-    font-size: 1em;
-    margin-top: 0px;
-    padding-top: 0px;
-}
-
 .list-wrapper img {
     display: block;
-    max-width: 100%;
-    margin: 0px auto;
+    max-width: 80%;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -400,16 +322,16 @@ nav li a:hover {
 
 .prev, .next {
     padding: 10px;
-    background: #368293;
+    background: #893746;
     color: #ffffff;
     border-radius: 5px;
-    border: 1px solid #368293;
+    border: 1px solid #893746;
 }
 
 .prev:hover, .next:hover {
     background: #ffffff;
-    color: #368293;
-    border: 1px solid #368293;
+    color: #893746;
+    border: 1px solid #893746;
 }
 
 .prev {
@@ -442,34 +364,16 @@ nav li a:hover {
     margin: 0px;
 }
 
-.blog-sidebar h2 {
-    text-align: left;
-    margin: 20px 0px 0px 0px;
-}
-
 .blog-sidebar .about-wrapper {
     width: 100%;
     margin-top: 10px;
 }
 
 .blog-sidebar ul {
-    list-style: none;
-    margin: 0px;
+    margin: 20px;
     padding: 0px;
 }
 
-.blogroll li a {
-    display: block;
-    width: 100%;
-    background: #f06543;
-    color: #ffffff;
-    padding: 5px;
-    margin-top: 10px;
-}
-
-.blogroll li a:hover {
-    background: #368293;
-}
 
 /* MAX 1100PX */
 
@@ -487,48 +391,13 @@ nav li a:hover {
     }
 }
 
-/* TAGS, CATEGORIES */
-
-.tags {
-    font-size: 0.8em;
-    clear: both;
-    overflow: auto;
-    padding: 4px;
-}
-
-.tags ul {
-    list-style: none;
-    margin: 0px auto;
-    padding: 0px;
-}
-
-.tags li {
-    margin: 10px 5px 5px 5px;
-    display: block;
-    float: left;
-}
-
-.tags li a {
-    background: #f06543;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #f06543;
-}
-
-.tags li a:hover {
-    background: #ffffff;
-    color: #f06543;
-    border: 1px solid #f06543;
-}
-
 /* FOOTER */
 
 footer {
     text-align: center;
     width: 100%;
     color: #ffffff;
-    background: #292f36;
+    background: #092d42;
     padding: 20px;
     margin-top: 20px;
     clear: both;

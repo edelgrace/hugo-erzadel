@@ -1,14 +1,10 @@
 <div class="blog-sidebar">
 
-  <h2>About</h2>
+  <h3>About</h3>
 
   <section id="about">
   
     <div class="about-wrapper">
-  
-      <div class="photo">
-        <img src="{{ $.Site.Params.avatar }}" alt="A photo of me" />
-      </div>    
 
       <div class="about">
         
@@ -17,9 +13,8 @@
 
         <div class="social-media">
           <ul>
-            <li><a href="https://www.linkedin.com/in/edel-altares/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="/index.xml"><i class="fa fa-rss"></i></a></li>
             <li><a href="https://github.com/edelgrace"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://twitter.com/edelgraceme"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://www.ravelry.com/people/erzadel"><i class="fa fa-ravelry"></i></a></li>
           </ul>
         </div>
@@ -29,7 +24,7 @@
   
   </section>    
 
-  <h2>Categories</h2>
+  <h3>Categories</h3>
 
   {{ $categories := $.Site.Taxonomies.categories.Alphabetical }}
 
@@ -47,7 +42,7 @@
       
   </ul>
 
-  <h2>Archives</h2>
+  <h3>Archives</h3>
   
   {{ with .Site.GetPage "section" "blog" }}
 
@@ -64,7 +59,7 @@
 
   <button id="go" onclick="archives()">Go</button>
 
-  <h2>Blogroll</h2>
+  <h3>Blogroll</h3>
 
   <ul class="blogroll">
     <li><a href="https://fadedout.com">Kim</a></li>

@@ -1,54 +1,50 @@
 {{ partial "header.html" . }}
 
 <div class="blog-wrapper">
-
   <div class="list-wrapper">
-    
-    <h2>{{ .Title }}</h2>
-    
-      {{ range (.Paginator 5).Pages }}
+  
+    {{ range (.Paginator 5).Pages }}
 
-      <article>
-        <div class="article">
+    <article>
+      <div class="article">
 
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          <h4>{{ .Date.Format "Jan 2, 2006" }} | <a href="{{ .Permalink }}#disqus_thread">Comments</a></h4>
-          
-          <div class="tags">
-              <ul>
-                {{ range.Params.categories }}
-                <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>            
-                {{ end }}
-    
-                {{ range .Params.tags }}
-                <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
-                {{ end }}
-              </ul>
-          </div>
-
-          <p>{{ .Content }}</p>
-
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h3>{{ .Date.Format "Jan 2, 2006" }} | <a href="{{ .Permalink }}#disqus_thread">Comments</a></h3>
+        
+        <div class="tags">
+            <ul>
+              {{ range.Params.categories }}
+              <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>            
+              {{ end }}
+  
+              {{ range .Params.tags }}
+              <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
+              {{ end }}
+            </ul>
         </div>
-      </article>
 
-      {{ end }}
+        {{ .Content }}
+
+      </div>
+    </article>
+
+    {{ end }}
       
   </div>
 
   <div class="pagination">
     
     {{ if .Paginator.HasPrev }}
-    <a class="prev" href="{{ .Paginator.Prev.URL }}">Previous</a>
+    <a class="prev" href="{{ .Paginator.Prev.URL }}">Newer</a>
     {{ end }}
 
     {{ if .Paginator.HasNext }}
-    <a class ="next" href="{{ .Paginator.Next.URL }}">Next</a>
+    <a class ="next" href="{{ .Paginator.Next.URL }}">Older</a>
     {{ end }}
 
   </div>
-
-</div>
+</div>  
 
 {{ partial "sidebar.html" . }}
-  
+
 {{ partial "footer.html" . }}
