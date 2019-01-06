@@ -41,22 +41,24 @@
     <article>
       <div class="article">
 
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <h4>{{ .Date.Format "Jan 2, 2006" }} | <a href="{{ .Permalink }}#disqus_thread">Comments</a></h4>
-        
-        <div class="tags">
-            <ul>
-              {{ range.Params.categories }}
-              <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>            
-              {{ end }}
-  
-              {{ range .Params.tags }}
-              <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
-              {{ end }}
-            </ul>
-        </div>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h3>{{ .Date.Format "January 2, 2006" }} | <a href="{{ .Permalink }}#disqus_thread">Comments</a></h3>
 
-        {{ .Content }}
+        <p>{{ .Summary }}</p>
+
+        <div class="tags">
+          <strong>Category:</strong> 
+          {{ range.Params.categories }}
+          <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>           
+          {{ end }}
+
+          <br />
+
+          <strong>Tags:</strong> 
+          {{ range .Params.tags }}
+          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+          {{ end }}
+        </div>
 
       </div>
     </article>
